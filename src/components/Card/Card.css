@@ -2,13 +2,13 @@
 	background-color: #ffffff;
 	padding: 20px;
 	margin-bottom: 20px;
-	margin-left: 10px;
+	margin-left: 0px;
 }
 
 @media (min-width: 700px) {
   .cardWrapper {
   	width: 40%;
-  	margin-left: 0px;
+  	margin-left: 10px;
   }
 }
 
