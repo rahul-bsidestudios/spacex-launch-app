@@ -1,0 +1,56 @@
+.app {
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+@media (min-width: 700px) {
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .cards {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cards {
+    width: 84%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}
+
+.app .header {
+  font-weight: bold;
+  font-size: 18px;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.app .footer {
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.app .developer {
+  font-weight: normal;
+  display: block;
+}
+
+@media (min-width: 700px) {
+  .app .developer {
+    display: inline;
+  }
+}

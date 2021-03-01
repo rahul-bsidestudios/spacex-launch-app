@@ -1,12 +1,18 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { hydrate, render } from 'react-dom';
 import './index.css';
-import App from './App';
+import { GlobalProvider } from './contexts/Global.provider';
+import App from './containers/App';
 import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(
+// use render for develop mode and hydrate for prod
+const renderMethod = module.hot ? render : hydrate;
+
+renderMethod(
   <React.StrictMode>
-    <App />
+  	<GlobalProvider>
+    	<App initialState={window.__DEFAULT_STATE__} />
+    </GlobalProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

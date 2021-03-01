@@ -1,0 +1,59 @@
+.cardWrapper {
+	background-color: #ffffff;
+	padding: 20px;
+	margin-bottom: 20px;
+	margin-left: 10px;
+}
+
+@media (min-width: 700px) {
+  .cardWrapper {
+  	width: 40%;
+  	margin-left: 0px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cardWrapper {
+  	width: 20%;
+  }
+}
+
+.cardWrapper .banner {
+	background-color: #f1f1f1;
+	text-align: center;
+}
+
+.cardWrapper .banner img {
+	width: 100%;
+	height: auto;
+}
+
+.cardWrapper .description {
+	margin-top: 20px;
+}
+
+.cardWrapper .row {
+	margin-bottom: 10px;
+}
+
+.cardWrapper .title, .cardWrapper label {
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.cardWrapper .title, .cardWrapper .value {
+	color: #5d639c;
+}
+
+.cardWrapper .value.missionId {
+	padding-left: 0;
+}
+
+.cardWrapper ul {
+	margin: 5px;
+	padding-left: 30px;
+}
+
+.cardWrapper .value {
+	padding-left: 5px;
+}

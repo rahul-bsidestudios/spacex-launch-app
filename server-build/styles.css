@@ -1,0 +1,187 @@
+.filtersWrap {
+	background-color: #ffffff;
+	padding: 10px;
+	margin-bottom: 20px;
+	height: 100%;
+}
+
+@media (min-width: 700px) {
+  .filtersWrap {
+  	width: 25%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .filtersWrap {
+  	width: 13%;
+  }
+}
+
+.filtersWrap .filterTitle {
+	font-weight: bold;
+	font-size: 16px;
+}
+
+.filtersWrap section {
+	padding: 0px 10px;
+}
+
+.filtersWrap ul {
+	list-style: none;
+	display: flex;
+	margin-bottom: 10px;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding-left: 0;
+}
+
+.filtersWrap .filterLabel {
+	text-align: center;
+	border-bottom: 2px solid #767676;
+	margin: 0 10%;
+	font-size: 16px;
+	display: block;
+	color: #767676;
+}
+
+.filtersWrap  .filter {
+	display: flex;
+	align-items: center;
+	flex: 0 0 50%;
+	margin-bottom: 10px;
+	justify-content: left;
+}
+
+.filtersWrap .filter:nth-child(even) {
+	justify-content: flex-end;
+}
+
+.filtersWrap .filter button {
+	cursor: pointer;
+	background-color: #c5e09b;
+	display: inline-block;
+	padding: 5px 12px;
+  border: none;
+  font-size: 12px;
+  outline: none;
+  border-radius: 4px;
+}
+
+.filtersWrap .filter button.active {
+	background-color: #75b309;
+}
+.cardWrapper {
+	background-color: #ffffff;
+	padding: 20px;
+	margin-bottom: 20px;
+	margin-left: 10px;
+}
+
+@media (min-width: 700px) {
+  .cardWrapper {
+  	width: 40%;
+  	margin-left: 0px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cardWrapper {
+  	width: 20%;
+  }
+}
+
+.cardWrapper .banner {
+	background-color: #f1f1f1;
+	text-align: center;
+}
+
+.cardWrapper .banner img {
+	width: 100%;
+	height: auto;
+}
+
+.cardWrapper .description {
+	margin-top: 20px;
+}
+
+.cardWrapper .row {
+	margin-bottom: 10px;
+}
+
+.cardWrapper .title, .cardWrapper label {
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.cardWrapper .title, .cardWrapper .value {
+	color: #5d639c;
+}
+
+.cardWrapper .value.missionId {
+	padding-left: 0;
+}
+
+.cardWrapper ul {
+	margin: 5px;
+	padding-left: 30px;
+}
+
+.cardWrapper .value {
+	padding-left: 5px;
+}
+.app {
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+@media (min-width: 700px) {
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .cards {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cards {
+    width: 84%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}
+
+.app .header {
+  font-weight: bold;
+  font-size: 18px;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.app .footer {
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.app .developer {
+  font-weight: normal;
+  display: block;
+}
+
+@media (min-width: 700px) {
+  .app .developer {
+    display: inline;
+  }
+}
