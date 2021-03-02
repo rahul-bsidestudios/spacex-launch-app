@@ -46,3 +46,7 @@ For CI, used github workflow that runs test cases on every push to master branch
 ## Deployment
 
 The app has a Procfile that is required by heroku to deploy the server.
+
+## Performance Snapshots
+![image](https://user-images.githubusercontent.com/19401452/109651802-fae2d000-7b84-11eb-91d8-80ed6731b348.png)
+
