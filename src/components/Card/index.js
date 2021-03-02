@@ -17,9 +17,9 @@ export const Card = ({ data }) => {
 	} = data || {};
 	return (
 		<div className="cardWrapper">
-			<div className="banner">
+			{links?.mission_patch_small && <div className="banner">
 				<img alt={mission_name} src={links?.mission_patch_small} />
-			</div>
+			</div>}
 			<div className="description">
 				<div className="title">{mission_name} #{flight_number}</div>
 				<section className="stats">
@@ -52,4 +52,3 @@ export const Card = ({ data }) => {
 Card.propTypes = {
 	data: PropTypes.object.isRequired
 };
-

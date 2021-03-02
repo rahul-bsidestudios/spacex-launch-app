@@ -1,4 +1,5 @@
 import React, { useContext, useEffect } from "react";
+import PropTypes from "prop-types";
 // labels
 import { HEADING, DEVELOPED_BY, DEVELOPER } from "../../labels";
 // components
@@ -9,12 +10,13 @@ import GlobalContext from "../../contexts/Global.context";
 // styles
 import "./App.css";
 
-function App({ initialState = [], filters={} }) {
+const App = ({ initialState = [], filters = {} }) => {
 	const {
 		filterLaunches,
 		launches,
 		setLaunches,
 	} = useContext(GlobalContext);
+
 	useEffect(() => {
 		if (initialState.length) {
 			setLaunches(initialState);
@@ -37,6 +39,16 @@ function App({ initialState = [], filters={} }) {
 			</div>
 		</div>
 	);
-}
+};
+
+App.propTypes = {
+	initialState: PropTypes.array,
+	filters: PropTypes.object,
+};
+
+App.defaultProps = {
+	initialState: [],
+	filters: {}
+};
 
 export default App;
