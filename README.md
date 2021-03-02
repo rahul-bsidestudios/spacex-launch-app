@@ -2,6 +2,14 @@
 
 A front-end application (with server side rendering) which would help users list and browse all launches by SpaceX program.
 
+## Approach used
+- Used CRA to get the basic client side code structure, then added server (express) side rendering to it.
+- In the server index file, rendering the APP component with the initial data as props and setting that to window object as well.
+- Used the same index.html file available in CRA and did some replacements to plug the server side rendered stuff.
+- On front end, used Context API to hold the state as this is a small app and does not require redux.
+- Used simple css (not sass) to keep it simple
+- Added a few test cases using jest
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -19,7 +27,7 @@ Open [http://localhost:3001](http://localhost:3001) to view it in the browser.
 
 You will see any lint errors in the console.
 
-### `npm test`
+### `npm run test`
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
