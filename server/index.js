@@ -5,19 +5,21 @@ import ReactDOMServer from "react-dom/server";
 import App from "../src/containers/App/index.js";
 // Services
 import { getLaunchesList } from "../src/services/launchService";
+// renderer
 import renderer from "./renderer";
 
 const PORT = process.env.PORT || 3001;
 const server = express();
 
 server.get("/", async (req, res) => {
-	const { data, error } = await getLaunchesList();
+	const { query } = req;
+	const { data, error } = await getLaunchesList(query);
 	if (error) {
 		return res.status(500).send(error);
 	}
 	else {
-		const app = ReactDOMServer.renderToString(<App initialState={data} />);
-		const { html, err } = await renderer(app, data);
+		const app = ReactDOMServer.renderToString(<App initialState={data} filters={query} />);
+		const { html, err } = await renderer(app, data, query);
 		if (err) {
 			return res.status(500).send(err);
 		}

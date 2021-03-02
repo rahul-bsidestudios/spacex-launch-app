@@ -11,7 +11,7 @@ const renderMethod = module.hot ? render : hydrate;
 renderMethod(
 	<React.StrictMode>
   	<GlobalProvider>
-    	<App initialState={window.__DEFAULT_STATE__} />
+    	<App initialState={window.__DEFAULT_STATE__} filters={window.__DEFAULT_QUERY__} />
 		</GlobalProvider>
 	</React.StrictMode>,
 	document.getElementById("root")

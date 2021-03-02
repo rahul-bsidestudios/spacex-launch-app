@@ -4,7 +4,7 @@
 export const getYearRange = (start, end) => {
 	const years = [];
 	for (let i = start; i <= end; i++) {
-		years.push(i);
+		years.push(i.toString());
 	}
 	return years;
 };
@@ -19,7 +19,7 @@ export const jsonToQuery = (json) => {
 	});
 	
 	if (queryParts.length) {
-		return "&" + queryParts.join("&");
+		return queryParts.join("&");
 	}
 
 	return "";

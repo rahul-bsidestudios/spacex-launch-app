@@ -9,13 +9,12 @@ import GlobalContext from "../../contexts/Global.context";
 // styles
 import "./App.css";
 
-function App({ initialState = [] }) {
+function App({ initialState = [], filters={} }) {
 	const {
 		filterLaunches,
 		launches,
 		setLaunches,
 	} = useContext(GlobalContext);
-  
 	useEffect(() => {
 		if (initialState.length) {
 			setLaunches(initialState);
@@ -28,7 +27,7 @@ function App({ initialState = [] }) {
 				{HEADING}
 			</header>
 			<div className="container">
-				<Filters onFilterChange={filterLaunches} />
+				<Filters onFilterChange={filterLaunches} initialFilters={filters} />
 				<div className="cards">
 					{launches?.map(item => <Card data={item} key={item.flight_number} />)}
 				</div>

@@ -7,7 +7,7 @@ import { jsonToQuery } from "../utils/helpers";
 export const getLaunchesList = async (filters = {}) => {
 	try {
 		const query = jsonToQuery(filters);
-		const response = await axios.get(`${API_URL}${query}`);
+		const response = await axios.get(`${API_URL}&${query}`);
 		return { data: response?.data };
 	} catch (error) {
 		console.log(error);

@@ -9,8 +9,8 @@ import { FILTERS, LAUNCH_YEAR, SUCCESS_LAND, SUCCESS_LAUNCH } from "../../labels
 // Styles
 import "./Filters.css";
 
-export const Filters = ({ onFilterChange }) => {
-	const [ filters, setFilters ] = useState({});
+export const Filters = ({ onFilterChange, initialFilters = {} }) => {
+	const [ filters, setFilters ] = useState(initialFilters);
 
 	const toggleFilter = (filter, value) => {
 		const newFilters = { ...filters };
@@ -64,5 +64,10 @@ export const Filters = ({ onFilterChange }) => {
 };
 
 Filters.propTypes = {
-	onFilterChange: PropTypes.func.isRequired
+	onFilterChange: PropTypes.func.isRequired,
+	initialFilters: PropTypes.object
+};
+
+Filters.defaultProps = {
+	initialFilters: {}
 };
