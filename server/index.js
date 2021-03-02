@@ -22,7 +22,7 @@ server.use(compression());
 
 server.get("/", async (req, res) => {
 	const { query } = req;
-	const serializedQuery = jsonToQuery(query) || 'default';
+	const serializedQuery = jsonToQuery(query) || "default";
 	if (cache.has(serializedQuery)) {
 		return res.status(200).send(cache.get(serializedQuery));
 	}
