@@ -4,13 +4,13 @@ import PropTypes from "prop-types";
 import { HEADING, DEVELOPED_BY, DEVELOPER } from "../../labels";
 // components
 import { Filters } from "../../components/Filters";
-import { Card } from "../../components/Card";
+import Card from "../../components/Card";
 // Context
 import GlobalContext from "../../contexts/Global.context";
 // styles
 import "./App.css";
 
-const App = ({ filters = {} }) => {
+export const App = ({ filters = {} }) => {
 	const {
 		filterLaunches,
 		launches,
@@ -44,4 +44,4 @@ App.defaultProps = {
 	filters: {}
 };
 
-export default App;
+export default React.memo(App);

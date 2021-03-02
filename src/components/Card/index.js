@@ -52,3 +52,5 @@ export const Card = ({ data }) => {
 Card.propTypes = {
 	data: PropTypes.object.isRequired
 };
+
+export default React.memo(Card);
