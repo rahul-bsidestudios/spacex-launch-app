@@ -5,9 +5,9 @@ import { getLaunchesList } from "../services/launchService";
 // helper methods
 import { jsonToQuery } from "../utils/helpers";
 
-export const GlobalProvider = ({ children }) => {
+export const GlobalProvider = ({ children, initialData = [] }) => {
 
-	const [ launches, setLaunches ] = useState([]);
+	const [ launches, setLaunches ] = useState(initialData);
 
 	const filterLaunches = async (filters = {}) => {
 		const query = jsonToQuery(filters, false);

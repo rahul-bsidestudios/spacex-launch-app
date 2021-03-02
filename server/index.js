@@ -4,6 +4,8 @@ import ReactDOMServer from "react-dom/server";
 import compression from "compression";
 // Components
 import App from "../src/containers/App/index.js";
+// Context
+import { GlobalProvider } from "../src/contexts/Global.provider";
 // Services
 import { getLaunchesList } from "../src/services/launchService";
 // renderer
@@ -21,7 +23,12 @@ server.get("/", async (req, res) => {
 		return res.status(500).send(error);
 	}
 	else {
-		const app = ReactDOMServer.renderToNodeStream(<App initialState={data} filters={query} />);
+		const app = ReactDOMServer.renderToString(
+			<GlobalProvider initialData={data}>
+				<App filters={query} />
+			</GlobalProvider>
+		);
+
 		const { html, err } = await renderer(app, data, query);
 		if (err) {
 			return res.status(500).send(err);

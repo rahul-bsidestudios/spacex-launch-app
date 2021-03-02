@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import PropTypes from "prop-types";
 // labels
 import { HEADING, DEVELOPED_BY, DEVELOPER } from "../../labels";
@@ -10,18 +10,11 @@ import GlobalContext from "../../contexts/Global.context";
 // styles
 import "./App.css";
 
-const App = ({ initialState = [], filters = {} }) => {
+const App = ({ filters = {} }) => {
 	const {
 		filterLaunches,
 		launches,
-		setLaunches,
 	} = useContext(GlobalContext);
-
-	useEffect(() => {
-		if (initialState.length) {
-			setLaunches(initialState);
-		}
-	}, [initialState, setLaunches]);
 
 	return (
 		<div className="app">

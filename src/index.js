@@ -1,17 +1,17 @@
 import React from "react";
-import { hydrate, render } from "react-dom";
+import { hydrate } from "react-dom";
 import "./index.css";
 import { GlobalProvider } from "./contexts/Global.provider";
 import App from "./containers/App";
 import reportWebVitals from "./reportWebVitals";
 
 // use render for develop mode and hydrate for prod
-const renderMethod = module.hot ? render : hydrate;
+const renderMethod = hydrate;
 
 renderMethod(
 	<React.StrictMode>
-  	<GlobalProvider>
-    	<App initialState={window.__DEFAULT_STATE__} filters={window.__DEFAULT_QUERY__} />
+  	<GlobalProvider initialData={window.__DEFAULT_STATE__}>
+    	<App filters={window.__DEFAULT_QUERY__} />
 		</GlobalProvider>
 	</React.StrictMode>,
 	document.getElementById("root")
