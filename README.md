@@ -40,6 +40,9 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
-### Deployment
+## CI
+For CI, used github workflow that runs test cases on every push to master branch.
+
+## Deployment
 
 The app has a Procfile that is required by heroku to deploy the server.
