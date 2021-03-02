@@ -1,0 +1,20 @@
+{
+  "extends": [
+    "react-app",
+    "react-app/jest",
+    "eslint:recommended"
+  ],
+  "rules": {
+    // enable additional rules
+    "indent": ["error", "tab"],
+    "quotes": ["error", "double"],
+    "semi": ["error", "always"],
+
+    // override default options for rules from base configurations
+    "no-cond-assign": ["error", "always"],
+    "no-unused-vars": ["error", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }],
+
+    // disable rules from base configurations
+    "no-console": "off"
+  }
+}

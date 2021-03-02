@@ -1,9 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 // labels
-import { MISSION_IDS, LAUNCH_YEAR, SUCCESS_LAUNCH, SUCCESS_LAND } from '../../labels';
+import { MISSION_IDS, LAUNCH_YEAR, SUCCESS_LAUNCH, SUCCESS_LAND } from "../../labels";
 // Styles
-import './Card.css';
+import "./Card.css";
 
 export const Card = ({ data }) => {
 	const {

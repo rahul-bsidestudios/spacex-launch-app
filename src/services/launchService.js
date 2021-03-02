@@ -1,8 +1,8 @@
-import axios from 'axios';
+import axios from "axios";
 // config
-import { API_URL } from '../config';
+import { API_URL } from "../config";
 // helper methods
-import { jsonToQuery } from '../utils/helpers';
+import { jsonToQuery } from "../utils/helpers";
 
 export const getLaunchesList = async (filters = {}) => {
 	try {

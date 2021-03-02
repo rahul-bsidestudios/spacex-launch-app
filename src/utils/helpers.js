@@ -14,13 +14,13 @@ export const jsonToQuery = (json) => {
 	const queryParts = [];
 	Object.keys(json).forEach((key) => {
 		if (json[key] !== undefined) {
-			queryParts.push(encodeURIComponent(key) + '=' + encodeURIComponent(json[key]));
-    }
-  });
+			queryParts.push(encodeURIComponent(key) + "=" + encodeURIComponent(json[key]));
+		}
+	});
 	
-	if (!!queryParts.length) {
-		return '&' + queryParts.join('&');
+	if (queryParts.length) {
+		return "&" + queryParts.join("&");
 	}
 
-	return '';
-}
+	return "";
+};

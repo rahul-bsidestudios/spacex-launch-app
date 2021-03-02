@@ -22,15 +22,9 @@
     "dev:build-server": "webpack --config webpack.server.js --mode=development -w",
     "dev:start": "nodemon ./server-build/bundle.js",
     "dev": "npm-run-all --parallel client-build dev:*",
-    "build": "react-scripts build && webpack --config webpack.server.js --mode=production",
-    "lint": "eslint src/**/*.js",
-    "lint-fix": "eslint src/**/*.js --fix"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "build": "eslint src/**/*.js server/**/*.js && react-scripts build && webpack --config webpack.server.js --mode=production",
+    "lint": "eslint src/**/*.js server/**/*.js",
+    "lint-fix": "eslint src/**/*.js server/**/*.js --fix"
   },
   "browserslist": {
     "production": [

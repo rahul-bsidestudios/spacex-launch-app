@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import GlobalContext from './Global.context';
-import { getLaunchesList } from '../services/launchService';
+import React, { useState } from "react";
+import GlobalContext from "./Global.context";
+import { getLaunchesList } from "../services/launchService";
 
 export const GlobalProvider = ({ children }) => {
 	
