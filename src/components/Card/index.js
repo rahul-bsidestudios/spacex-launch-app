@@ -12,8 +12,8 @@ export const Card = ({ data }) => {
 		launch_year,
 		mission_id,
 		launch_success,
-		land_success,
 		links,
+		rocket
 	} = data || {};
 	return (
 		<div className="cardWrapper">
@@ -41,7 +41,7 @@ export const Card = ({ data }) => {
 					</div>
 					<div className="row">
 						<label>{SUCCESS_LAND}:</label>
-						<span className="value">{land_success?.toString()}</span>
+						<span className="value">{rocket?.first_stage?.cores[0]?.land_success?.toString()}</span>
 					</div>
 				</section>
 			</div>
