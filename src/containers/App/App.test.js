@@ -1,8 +1,8 @@
-import React from 'react';
-import { shallow } from 'enzyme';
-import App from './index';
+import React from "react";
+import { shallow } from "enzyme";
+import App from "./index";
 
-describe('Test cases for App component', () => {
+describe("Test cases for App component", () => {
 	const mockProps = {
 		initialState: [{
 			flight_number: "1",
@@ -19,15 +19,15 @@ describe('Test cases for App component', () => {
 	};
 	const component = shallow(<App { ...mockProps } />);
 	
-	test('Should match snapshot', () => {
-  	expect(component).toMatchSnapshot();
+	test("Should match snapshot", () => {
+		expect(component).toMatchSnapshot();
 	});
 
-	test('Should have a header', () => {
-		expect(component.find('header').length).toEqual(1);
+	test("Should have a header", () => {
+		expect(component.find("header").length).toEqual(1);
 	});
 
-	test('Should have a container', () => {
-		expect(component.find('.container').length).toEqual(1);
+	test("Should have a container", () => {
+		expect(component.find(".container").length).toEqual(1);
 	});
 });

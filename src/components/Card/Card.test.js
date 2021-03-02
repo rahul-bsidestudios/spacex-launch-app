@@ -1,8 +1,8 @@
-import React from 'react';
-import { shallow } from 'enzyme';
-import { Card } from './index';
+import React from "react";
+import { shallow } from "enzyme";
+import { Card } from "./index";
 
-describe('Test cases for Card component', () => {
+describe("Test cases for Card component", () => {
 	const mockProps = {
 		data: {
 			flight_number: "1",
@@ -18,7 +18,7 @@ describe('Test cases for Card component', () => {
 	};
 	const component = shallow(<Card { ...mockProps } />);
 	
-	test('Should match snapshot', () => {
-  	expect(component).toMatchSnapshot();
+	test("Should match snapshot", () => {
+		expect(component).toMatchSnapshot();
 	});
 });

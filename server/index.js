@@ -1,7 +1,7 @@
 import React from "react";
 import express from "express";
 import ReactDOMServer from "react-dom/server";
-import compression from 'compression';
+import compression from "compression";
 // Components
 import App from "../src/containers/App/index.js";
 // Services
