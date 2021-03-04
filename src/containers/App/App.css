@@ -25,10 +25,12 @@ html {
     justify-content: space-between;
   }
   .cards {
-    width: 75%;
+    width: 84%;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+    flex: 0 0 calc(100% - 220px);
+    max-width: calc(100% - 220px);
   }
 }
 

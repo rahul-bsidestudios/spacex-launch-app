@@ -7,13 +7,15 @@
 
 @media (min-width: 701px) {
   .filtersWrap {
-  	width: 25%;
+  	flex: 0 0 200px;
+		max-width: 200px;
   }
 }
 
 @media (min-width: 1025px) {
   .filtersWrap {
-  	width: 15%;
+  	flex: 0 0 200px;
+		max-width: 200px;
   }
 }
 

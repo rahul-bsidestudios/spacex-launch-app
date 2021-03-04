@@ -7,15 +7,15 @@
 
 @media (min-width: 701px) {
   .cardWrapper {
-  	width: 49%;
-  	margin-left: 5px;
+  	flex: 0 0 calc(50% - 10px);
+		max-width: calc(50% - 10px);
+		width: auto;
+		margin-right: 20px;
   }
-}
-
-@media (min-width: 1025px) {
-  .cardWrapper {
-  	width: 24%;
-  }
+  .cardWrapper:nth-child(2n),
+	.cardWrapper:nth-child(4n) {
+	  margin-right: 0;
+	}
 }
 
 .cardWrapper .banner {
