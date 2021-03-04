@@ -5,14 +5,13 @@
 	margin-left: 0px;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 701px) {
   .cardWrapper {
   	width: 40%;
-  	margin-left: 10px;
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
   .cardWrapper {
   	width: 20%;
   }
@@ -24,7 +23,7 @@
 }
 
 .cardWrapper .banner img {
-	width: 100%;
+	max-width: 100%;
 	height: auto;
 }
 

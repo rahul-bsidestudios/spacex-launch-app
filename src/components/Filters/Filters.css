@@ -5,13 +5,13 @@
 	height: 100%;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 701px) {
   .filtersWrap {
   	width: 25%;
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
   .filtersWrap {
   	width: 13%;
   }

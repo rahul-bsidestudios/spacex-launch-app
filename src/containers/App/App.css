@@ -3,7 +3,7 @@
   padding: 10px;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 701px) {
   .container {
     display: flex;
     justify-content: space-between;
@@ -12,17 +12,17 @@
     width: 70%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: space-between;
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
   .cards {
     width: 84%;
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1441px) {
   .container {
     max-width: 1440px;
     margin: 0 auto;
@@ -53,7 +53,7 @@
   display: block;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 701px) {
   .app .developer {
     display: inline;
   }
