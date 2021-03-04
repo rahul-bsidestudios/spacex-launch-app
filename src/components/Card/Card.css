@@ -18,6 +18,16 @@
 	}
 }
 
+@media (min-width: 1025px) {
+  .cardWrapper {
+  	flex: 0 0 calc(25% - 10px);
+		max-width: calc(25% - 10px);
+  }
+  .cardWrapper:nth-child(4n) {
+    margin-right: 0;
+	}
+}
+
 .cardWrapper .banner {
 	background-color: #f1f1f1;
 	text-align: center;
